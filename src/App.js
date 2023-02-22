@@ -26,7 +26,10 @@ function App() {
   }
 
   function removeTodo (id) {
-    setTodoList(todoList.filter((todo) => todo.id !== id));
+    const newList = todoList.filter(
+      (todo) => id.title !== todo.title
+    );
+    setTodoList(newList);
   }
 
   return (
