@@ -1,14 +1,21 @@
 import React from "react";
 
-function InputWithLabel ({todoTitle, handleTitleChange, isFocused, children}) {
+function InputWithLabel ({
+    todoTitle, 
+    handleTitleChange, 
+    type = 'text',
+    isFocused, 
+    children
+
+    }) {
 
     const inputRef = React.useRef();
 
     React.useEffect(() => {
-        if(isFocused){
+        if(isFocused && inputRef.current){
             inputRef.current.focus();
         }
-    })
+    }, [isFocused]);
 
     return (
         <>
