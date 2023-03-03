@@ -12,8 +12,7 @@ function AddTodoForm ({onAddTodo}) {
         console.log(newTodoTitle);
     }
 
-    function handleAddTodo (event){
-        //event.preventDefault(); //commenting it out helps it appear
+    function handleAddTodo (){
         console.log(todoTitle);
         onAddTodo( {title: todoTitle, id: Date.now() } ); 
         setTodoTitle("");
