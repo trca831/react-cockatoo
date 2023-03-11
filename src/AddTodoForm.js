@@ -13,6 +13,7 @@ function AddTodoForm ({onAddTodo}) {
     }
 
     function handleAddTodo (){
+        // event.preventDefault();
         console.log(todoTitle);
         onAddTodo( {title: todoTitle, id: Date.now() } ); 
         setTodoTitle("");
@@ -24,7 +25,8 @@ function AddTodoForm ({onAddTodo}) {
         <InputWithLabel 
                 todoTitle = {todoTitle} 
                 handleTitleChange = {handleTitleChange}
-                isFocused = {true}  >
+                // isFocused = {true}  
+                >
                             Title
         </InputWithLabel>
             <button type="submit"> Add</button>
