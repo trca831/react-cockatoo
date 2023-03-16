@@ -52,15 +52,15 @@ function App() {
         <Routes>
           <Route path='/' element={
 
-          <>
-          <h1>Todo List:</h1>
-          <AddTodoForm onAddTodo = {addTodo} />
-              {isLoading ? (
-                <p>Loading...</p>
-              ) : (  
-              <TodoList todoList = {todoList} onRemoveTodo={removeTodo}/>
-              )}
-          </>
+              <>
+              <h1>Todo List:</h1>
+              <AddTodoForm onAddTodo = {addTodo} />
+                  {isLoading ? (
+                    <p>Loading...</p>
+                  ) : (  
+                  <TodoList todoList = {todoList} onRemoveTodo={removeTodo}/>
+                  )}
+              </>
 
           } exact/>
           <Route path='/new' element={<h1>New Todo List</h1>} />
