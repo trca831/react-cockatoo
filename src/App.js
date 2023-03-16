@@ -45,25 +45,24 @@ function App() {
     setTodoList((handleRemove) =>
       handleRemove.filter((todo) => id.title !== todo.title));
   };
-      function Home() {
-        return (
-          <>
-          <h1>Todo List:</h1>
-          <AddTodoForm onAddTodo = {addTodo} />
-          {isLoading ? (
-            <p>Loading...</p>
-          ) : (  
-          <TodoList todoList = {todoList} onRemoveTodo={removeTodo}/>
-          )}
-        </>
-      );
-    }
 
     return (
 
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<Home/>} exact/>
+          <Route path='/' element={
+
+          <>
+          <h1>Todo List:</h1>
+          <AddTodoForm onAddTodo = {addTodo} />
+              {isLoading ? (
+                <p>Loading...</p>
+              ) : (  
+              <TodoList todoList = {todoList} onRemoveTodo={removeTodo}/>
+              )}
+          </>
+
+          } exact/>
           <Route path='/new' element={<h1>New Todo List</h1>} />
         </Routes>
       </BrowserRouter>
