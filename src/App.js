@@ -1,8 +1,10 @@
 import React, {useState, useEffect} from 'react';
 import AddTodoForm from './AddTodoForm';
 import TodoList from './TodoList';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 const url = `https://api.airtable.com/v0/${process.env.REACT_APP_AIRTABLE_BASE_ID}/Default/`;
+
 
 function App() {
 
@@ -24,32 +26,6 @@ function App() {
         setIsLoading(false);
     })
     .catch((error) => console.log(error));
-
-    // fetch(url, options)
-    //   .then((response) => response.json())
-    //   .then((result) => {
-    //     const todos = result.records.map((item) => ({
-    //       id: item.id,
-    //       title: item.fields.Title,
-    //     }));
-
-    //     setTodoList([...todos]);
-    //     setIsLoading(false);
-    //   });
-  
-    // new Promise ((resolve, reject) => 
-    //   setTimeout (
-    //     () => 
-    //     resolve({
-    //       data: {todoList: JSON.parse(localStorage.getItem("savedTodoList")) || 
-    //     [], },
-    //    }),
-    //    2000)
-    // )
-    // .then ((result) => {
-    //   setTodoList(result.data.todoList);
-    //   setIsLoading(false);
-    // });
    
   }, []);
 
@@ -69,18 +45,31 @@ function App() {
     setTodoList((handleRemove) =>
       handleRemove.filter((todo) => id.title !== todo.title));
   };
+      function Home() {
+        return (
+          <>
+          <h1>Todo List:</h1>
+          <AddTodoForm onAddTodo = {addTodo} />
+          {isLoading ? (
+            <p>Loading...</p>
+          ) : (  
+          <TodoList todoList = {todoList} onRemoveTodo={removeTodo}/>
+          )}
+        </>
+      );
+    }
 
-  return (
-    <>
-    <h1>Todo List:</h1>
-    <AddTodoForm onAddTodo = {addTodo} />
-    {isLoading ? (
-      <p>Loading...</p>
-    ) : (  
-    <TodoList todoList = {todoList} onRemoveTodo={removeTodo}/>
-    )}
-  </>
-);
+    return (
+
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Home/>} exact/>
+          <Route path='/new' element={<h1>New Todo List</h1>} />
+        </Routes>
+      </BrowserRouter>
+
+    )
+
 }
 
 export default App;
