@@ -3,6 +3,8 @@ import AddTodoForm from './AddTodoForm';
 import TodoList from './TodoList';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
+import "./App.css";
+
 const url = `https://api.airtable.com/v0/${process.env.REACT_APP_AIRTABLE_BASE_ID}/Default/`;
 
 
@@ -53,7 +55,7 @@ function App() {
           <Route path='/' element={
 
               <>
-              <h1>Todo List:</h1>
+              <h1 className="heading">Todo List:</h1>
               <AddTodoForm onAddTodo = {addTodo} />
                   {isLoading ? (
                     <p>Loading...</p>

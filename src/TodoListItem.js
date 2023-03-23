@@ -1,10 +1,18 @@
 import React from 'react';
+// import style from "./TodoListItem.module.css";
 
 function TodoListItem ({todo, onRemoveTodo}){
 
+    const removeit = {
+        color: "white",
+        backgroundColor: "DodgerBlue",
+        padding: "10px",
+        fontFamily: "Arial"
+    };
+
     return (
-        <li>{todo.fields.Title}
-            <button type="button" onClick={() => onRemoveTodo(todo)}>
+        <li className={style.ListItem}>{todo.fields.Title}
+            <button style={removeit} type="button" onClick={() => onRemoveTodo(todo)}>
                 Remove
             </button>
         </li>
