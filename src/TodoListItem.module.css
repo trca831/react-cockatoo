@@ -3,3 +3,9 @@
     padding: 4px;
     list-style-type: none;
 }
+
+@media screen and (max-width: 450px){
+    .ListItem {
+        padding: 0px;
+    }
+}

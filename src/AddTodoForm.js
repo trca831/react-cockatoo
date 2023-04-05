@@ -8,10 +8,14 @@ function AddTodoForm ({onAddTodo}) {
     const [todoTitle, setTodoTitle] = useState([]);
 
     const myadd = {
-        color: "white",
       backgroundColor: "DodgerBlue",
-      padding: "10px",
-      fontFamily: "Arial"
+      color: "white",
+      padding: "5px",
+      fontFamily: "Verdana, sans-serif",
+      fontSize: "20px",
+      borderRadius: "15px",
+      border: "2px solid",
+    //   need to use camelCase here
     };
 
     function handleTitleChange (event) {
@@ -35,7 +39,7 @@ function AddTodoForm ({onAddTodo}) {
                 isFocused = {true}  >
                             Title
         </InputWithLabel>
-            <button style={myadd} type="submit"> Add</button>
+            <button style={myadd} type="submit"> Add </button>
         </form>
     )
 }

@@ -13,7 +13,7 @@
   font-family: "Amazon Ember",sans-serif;
   font-size: 13px;
   line-height: 29px;
-  padding: 0 10px 0 11px;
+  padding: 10px 10px 10px 11px;
   position: relative;
   text-align: center;
   text-decoration: none;
@@ -32,4 +32,14 @@
   border-color: #008296;
   box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
   outline: 0;
+}
+
+@media screen and (max-width: 100px) {
+    .button-13 {
+      margin: 0;
+    }
+
+    .button-13:focus {
+      outline: 4;
+    }
 }
