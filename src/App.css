@@ -1,0 +1,15 @@
+.heading {
+    color: rgb(217, 196, 223);
+    font-size: 50px;
+    font-weight: 1px;
+    line-height: 40px;
+
+    /* not working but after putting dot it worked */
+}
+
+@media screen and (max-width: 450px){
+    .heading {
+        font-size: 25px;
+        line-height: 20px;
+    }
+}
