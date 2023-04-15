@@ -1,6 +1,7 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-function InputWithLabel ( props, {children} ) {
+function InputWithLabel ( {todoTitle, handleTitleChange, children} ) {
 
     const inputRef = React.useRef();
 
@@ -27,12 +28,18 @@ function InputWithLabel ( props, {children} ) {
                     type="text" 
                     id="todoTitle"
                     name="title"
-                    value = {props.todoTitle}
-                    onChange = {props.handleTitleChange}
+                    value = {todoTitle}
+                    onChange = {handleTitleChange}
                     />
                     </label>
          </>
     );
 };
+
+InputWithLabel.propTypes = {
+		children: PropTypes.string,
+        todoTitle: PropTypes.array,
+        handleTitleChange: PropTypes.func,
+}
 
 export default InputWithLabel;
