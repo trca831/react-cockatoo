@@ -1,11 +1,12 @@
 import React, {useState, useEffect} from 'react';
 import AddTodoForm from './components/AddTodoForm';
 import TodoList from './components/TodoList';
+
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import "./App.css";
 
-const url = `https://api.airtable.com/v0/${process.env.REACT_APP_AIRTABLE_BASE_ID}/Default/`;
+const url = `https://api.airtable.com/v0/${process.env.REACT_APP_AIRTABLE_BASE_ID}/Default?view=Grid%20view&sort[0][field]=Title&sort[0][direction]=asc`;
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
   let [isLoading, setIsLoading] = useState(true);
 
  useEffect( () => {
+
   const options = {
     method: "GET",
     headers: {
@@ -30,6 +32,26 @@ function App() {
     .catch((error) => console.log(error));
    
   }, []);
+
+  // useEffect( () => {
+
+  //   const options = {
+  //     method: "POST",
+  //     headers: {
+    
+  //         Authorization: `Bearer ${process.env.REACT_APP_AIRTABLE_API_KEY}`,
+  //     },
+  //   };
+  //   fetch(url, options)
+  //     .then((response) => response.json())
+  //     .then((result) => {
+  //         console.log(result.records);
+  //         setTodoList(result.records);
+  //         setIsLoading(false);
+  //     })
+  //     .catch((error) => console.log(error));
+     
+  //   }, []);
 
  useEffect(() => {
     if (!isLoading){
