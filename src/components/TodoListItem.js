@@ -1,8 +1,9 @@
 import React from 'react';
 import style from "./TodoListItem.module.css";
+import { BsPencilFill, BsTrashFill } from "react-icons/bs"
 import { PropTypes } from "prop-types";
 
-function TodoListItem ({todo, onRemoveTodo}){
+function TodoListItem ({todo, onRemoveTodo, onEditedTodo, setEditMode}){
 
     const removeit = {
         color: "white",
@@ -22,16 +23,26 @@ function TodoListItem ({todo, onRemoveTodo}){
     };
 
     return (
-        <>
-        <li className={style.ListItem}> 
-            {" "} {todo.fields.Title} {" "}
-            <button style={removeit} 
-                    type="button" 
-                    onClick={() => onRemoveTodo(todo.id)}>
-                Delete
-            </button>
-        </li>
-        </>
+        <li> 
+            <input type="checkbox" id="todo.id" ></input>  
+            {todo.fields?.Title?  todo.fields.Title : todo.title }
+            
+            <button type="button" onClick={() => 
+            onRemoveTodo(todo.id)}>  <BsTrashFill/>     </button>
+
+            <button type="button" onClick={() =>
+            setEditMode({status:true, data:todo})}> <BsPencilFill/></button>  
+            </li>
+        // <>
+        // <li className={style.ListItem}> 
+        //     {" "} {todo.fields.Title} {" "}
+        //     <button style={removeit} 
+        //             type="button" 
+        //             onClick={() => onRemoveTodo(todo.id)}>
+        //         Delete
+        //     </button>
+        // </li>
+        // </>
     )
 }
 

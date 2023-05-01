@@ -4,18 +4,21 @@ import { PropTypes } from "prop-types";
 
 import styled from "./TodoList.css";
 
-function TodoList ({todoList, onRemoveTodo}){
+function TodoList ({todoList, onRemoveTodo, onEditedTodo, setEditMode}){
     return (
-      <div>
+      
         <ul className ={styled.items}>
         {todoList.map((todo) => (
             <TodoListItem 
                 key = {todo.id} 
                 todo = {todo} 
-                onRemoveTodo = {onRemoveTodo}/>
+                setEditMode={setEditMode}
+                onRemoveTodo = {onRemoveTodo}
+                onEditedTodo={onEditedTodo}
+                />
             ))}
         </ul>
-        </div>
+        
     );
 }
 

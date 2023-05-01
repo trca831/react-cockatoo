@@ -1,9 +1,18 @@
-import React from "react";
+import React, {useRef, useEffect} from "react";
 import PropTypes from "prop-types";
+import { BsPencilFill, BsTrashFill } from "react-icons/bs"
 
-function InputWithLabel ( {todoTitle, handleTitleChange, children} ) {
 
-    const inputRef = React.useRef();
+function InputWithLabel ( {
+    todoTitle, 
+    // handleTitleChange, 
+    children, 
+    setInputValue,
+    inputValue,
+    editMode
+} ) {
+
+    const inputRef = useRef(null);
 
     const whitebox = {
         padding: "10px 2px",
@@ -13,25 +22,34 @@ function InputWithLabel ( {todoTitle, handleTitleChange, children} ) {
         borderRadius: "14px"
     };
 
-    React.useEffect(() => {
-        if(inputRef.current){
+    useEffect(() => {
+        // if(inputRef.current){ 
             inputRef.current.focus();
-        }
+        // }
     }, []);
+
+    useEffect(() => {
+        if(editMode.status){
+            setInputValue(editMode.data.fields.Title);
+        }
+    }, [editMode, setInputValue])
 
     return (
         <>
-            <label htmlFor="title"> {children} 
+            <label htmlFor="title"> {children} </label>
                 <input 
                     style = {whitebox}
                     ref = {inputRef}
                     type="text" 
                     id="todoTitle"
                     name="title"
-                    value = {todoTitle}
-                    onChange = {handleTitleChange}
+                    value={inputValue}
+                    onChange={ (event) => setInputValue(event.target.value) }
+                    // value = {todoTitle}
+                    // onChange = {handleTitleChange}
+
                     />
-                    </label>
+                    
          </>
     );
 };
