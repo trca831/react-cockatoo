@@ -14,7 +14,10 @@ function Navbar() {
             backgroundColor: "#545454",
            }}
            >
-        
+        <p style={{ position: "absolute",
+                    left: "auto",
+                    width: "50px",
+                    height: "60px"}}> TodoList </p>
         <ul style={{}}>
                 <li style={{
                     listStyle: "none",

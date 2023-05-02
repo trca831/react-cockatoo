@@ -7,7 +7,7 @@ import styled from "./TodoList.css";
 function TodoList ({todoList, onRemoveTodo, onEditedTodo, setEditMode}){
     return (
       
-        <ul className ={styled.items}>
+        <ul style={{listStyle: "none"}}>
         {todoList.map((todo) => (
             <TodoListItem 
                 key = {todo.id} 

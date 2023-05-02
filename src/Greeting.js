@@ -6,7 +6,7 @@ const hours = date.getHours()
 let timeOfDay
 
 const styles = {
-  fontSize: 40
+  fontSize: 30
 }
 
 if (hours < 5){
@@ -22,7 +22,7 @@ if (hours < 5){
   timeOfDay = "afternoon. Did you finish your list?"
   styles.color = "#8a2be2"
 } else if (hours >= 17 && hours < 21) {
-  timeOfDay = "evening. Do you have time to work on your list?"
+  timeOfDay = "evening. Let's work on your list!"
   styles.color = "#8a2be2"
 } else {
   timeOfDay = "night. Good job on completing your list!!"

@@ -4,6 +4,16 @@
     list-style-type: none;
 }
 
+.todoList {
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 4px auto;
+    box-shadow: 1px 1px 5px 1px white inset;
+    text-align: justify;
+}
+
 @media screen and (max-width: 450px){
     .ListItem {
         padding: 0px;

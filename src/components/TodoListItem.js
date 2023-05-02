@@ -1,5 +1,5 @@
 import React from 'react';
-import style from "./TodoListItem.module.css";
+import styles from "./TodoListItem.module.css";
 import { BsPencilFill, BsTrashFill } from "react-icons/bs"
 import { PropTypes } from "prop-types";
 
@@ -11,7 +11,8 @@ function TodoListItem ({todo, onRemoveTodo, onEditedTodo, setEditMode}){
         padding: "5px",
         fontFamily: "Arial",
         fontSize: "10px",
-        borderRadius: "20px"
+        borderRadius: "20px",
+        
 
     //     backgroundColor: "DodgerBlue",
     //   color: "white",
@@ -23,8 +24,9 @@ function TodoListItem ({todo, onRemoveTodo, onEditedTodo, setEditMode}){
     };
 
     return (
-        <li> 
-            <input type="checkbox" id="todo.id" ></input>  
+        <li className={styles.todoList}> 
+            <input type="checkbox" id="todo.id" ></input> 
+
             {todo.fields?.Title?  todo.fields.Title : todo.title }
             
             <button type="button" onClick={() => 

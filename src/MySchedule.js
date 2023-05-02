@@ -5,8 +5,10 @@ import TodaysDate from "./TodaysDate";
 function MySchedule () {
     return(
         <>
-        <Greeting/>
         <TodaysDate/>
+        <br/>
+        <Greeting/>
+        <div style={{textAlign: "left"}}>
         <h1>Today's Schedule</h1>
         7:00 AM
         <input type="text"></input>
@@ -56,8 +58,8 @@ function MySchedule () {
         10:00 PM
         <input type="text"></input>
         <br/>
-        </>
-       
+        </div>
+       </>
     );
 }
 

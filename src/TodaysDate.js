@@ -66,7 +66,13 @@ let currentDate = `${name}, ${month} ${day}${ordinal}, ${year}`;
 function TodaysDate () {
 return (
 <>
-<h3>Today is {currentDate}</h3> 
+<h3 style ={{
+  position: "absolute", 
+  auto: "left",
+  border: "1px",
+  backgroundColor: "white",
+  opacity: "0.4"
+  }}>Today is {currentDate}</h3> 
 
 </>
 )

@@ -6,10 +6,12 @@ import TodaysDate from './TodaysDate';
 import Greeting from './Greeting';
 import MySchedule from './MySchedule';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
+import { FaSync } from "react-icons/fa";
 
 // import "./App.css";
 const url = `https://api.airtable.com/v0/${process.env.REACT_APP_AIRTABLE_BASE_ID}/Default/`;
 // const url = `https://api.airtable.com/v0/${process.env.REACT_APP_AIRTABLE_BASE_ID}/Default?view=Grid%20view&sort[0][field]=Title&sort[0][direction]=asc`;
+
 
 
 function App() {
@@ -153,8 +155,9 @@ function App() {
           <Route path='/' element={
               <>
               <TodaysDate/>
+              <br/>
               <Greeting />
-              <h1 className="heading">Todo List:</h1>
+              {/* <h1 className="heading">Todo List:</h1> */}
               <AddTodoForm 
                 onAddTodo = {addTodo}
                 editMode={editMode}
@@ -172,7 +175,8 @@ function App() {
                   )}
             <button type="button" 
             onClick={() => setAscending(!ascending)}> 
-            Change </button>
+            <FaSync icon="fa-light fa-arrow-up-arrow-down" style={{color: "#8b008b"}} />
+            </button>
               </>
 
           } exact/>
