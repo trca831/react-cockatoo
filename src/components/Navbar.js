@@ -1,10 +1,9 @@
 import React from "react";
-// import { BrowserRouter, Route } from "react-router-dom";
-// import Logo from '../src/assets/TC.png'
 
 function Navbar() {
     
     return (
+        <>
         <div 
         style={{
             fontSize: "20px",
@@ -13,7 +12,7 @@ function Navbar() {
             textAlign: "right",
             backgroundColor: "#545454",
            }}
-           >
+           >  
         <p style={{ position: "absolute",
                     left: "auto",
                     width: "50px",
@@ -25,17 +24,23 @@ function Navbar() {
                     color: "red"
                     }} >
                         
-                <a style={{textDecoration: "none", 
-                            color: "#ff70d6", 
-                            letterSpacing: "2px", 
-                            wordSpacing: "2px"}} href='/'> &nbsp; Home &nbsp; </a>
-                <a style={{textDecoration: "none", 
-                            color: "#ff70d6", 
-                            letterSpacing: "2px"}} href='/mySchedule'> Schedule </a>
+                    <a style={{textDecoration: "none", 
+                                color: "#ff70d6", 
+                                letterSpacing: "2px"}} href='/mySchedule'> Home </a> 
+
+                    <a style={{textDecoration: "none", 
+                                color: "#ff70d6", 
+                                letterSpacing: "2px", 
+                                wordSpacing: "2px"}} href='/'> &nbsp; TodoList &nbsp; </a>
+                               
                 </li>
-            </ul>
+                
+        </ul>
+
+       
       
     </div>
+    </>
     )
 }
 

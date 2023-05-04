@@ -2,9 +2,7 @@ import React from 'react';
 import TodoListItem from './TodoListItem';
 import { PropTypes } from "prop-types";
 
-import styled from "./TodoList.css";
-
-function TodoList ({todoList, onRemoveTodo, onEditedTodo, setEditMode}){
+function TodoList ({todoList, onRemoveTodo, setEditMode}){
     return (
       
         <ul style={{listStyle: "none"}}>
@@ -14,7 +12,6 @@ function TodoList ({todoList, onRemoveTodo, onEditedTodo, setEditMode}){
                 todo = {todo} 
                 setEditMode={setEditMode}
                 onRemoveTodo = {onRemoveTodo}
-                onEditedTodo={onEditedTodo}
                 />
             ))}
         </ul>

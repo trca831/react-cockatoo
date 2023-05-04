@@ -1,11 +1,8 @@
 import React, {useRef, useEffect} from "react";
 import PropTypes from "prop-types";
-import { BsPencilFill, BsTrashFill } from "react-icons/bs"
 
 
 function InputWithLabel ( {
-    todoTitle, 
-    // handleTitleChange, 
     children, 
     setInputValue,
     inputValue,
@@ -19,13 +16,12 @@ function InputWithLabel ( {
         margin: "15px",
         textAlign: "center",
         border: "2px solid purple",
-        borderRadius: "14px"
+        borderRadius: "14px",
+        width: "40%"
     };
 
     useEffect(() => {
-        // if(inputRef.current){ 
             inputRef.current.focus();
-        // }
     }, []);
 
     useEffect(() => {
@@ -45,9 +41,6 @@ function InputWithLabel ( {
                     name="title"
                     value={inputValue}
                     onChange={ (event) => setInputValue(event.target.value) }
-                    // value = {todoTitle}
-                    // onChange = {handleTitleChange}
-
                     />
                     
          </>

@@ -8,16 +8,13 @@ import MySchedule from './MySchedule';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import { FaSync } from "react-icons/fa";
 
-// import "./App.css";
+
 const url = `https://api.airtable.com/v0/${process.env.REACT_APP_AIRTABLE_BASE_ID}/Default/`;
 // const url = `https://api.airtable.com/v0/${process.env.REACT_APP_AIRTABLE_BASE_ID}/Default?view=Grid%20view&sort[0][field]=Title&sort[0][direction]=asc`;
-
-
 
 function App() {
 
   let [editMode, setEditMode] = useState({status:false, data:{}});
-  
   let [todoList, setTodoList] = useState([]);
   let [isLoading, setIsLoading] = useState(true);
   let [ascending, setAscending] = useState(true);
@@ -54,7 +51,6 @@ function App() {
         }
       })
 
-        // console.log(result.records);
         setTodoList(result.records);
         setIsLoading(false);
     })
@@ -157,12 +153,13 @@ function App() {
               <TodaysDate/>
               <br/>
               <Greeting />
-              {/* <h1 className="heading">Todo List:</h1> */}
+              <h1 className="heading">Todo List:</h1>
               <AddTodoForm 
                 onAddTodo = {addTodo}
                 editMode={editMode}
                 onEditTodo={editTodo}
-                setEditMode={setEditMode} />
+                setEditMode={setEditMode} 
+                />
                   {isLoading ? (
                     <p>Loading...</p>
                   ) : (  
@@ -170,12 +167,12 @@ function App() {
                       todoList = {todoList} 
                       onRemoveTodo={removeTodo}
                       setEditMode = {setEditMode}
-                      onEditedTodo = {editTodo}
                       />
                   )}
             <button type="button" 
             onClick={() => setAscending(!ascending)}> 
-            <FaSync icon="fa-light fa-arrow-up-arrow-down" style={{color: "#8b008b"}} />
+            <FaSync icon="fa-light fa-arrow-up-arrow-down" 
+            style={{color: "black", opacity: "90%", width: "50px", height: "40px"}} />
             </button>
               </>
 
