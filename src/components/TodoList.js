@@ -2,20 +2,20 @@ import React from 'react';
 import TodoListItem from './TodoListItem';
 import { PropTypes } from "prop-types";
 
-import styled from "./TodoList.css";
-
-function TodoList ({todoList, onRemoveTodo}){
+function TodoList ({todoList, onRemoveTodo, setEditMode}){
     return (
-      <div>
-        <ul className ={styled.items}>
+      
+        <ul style={{listStyle: "none"}}>
         {todoList.map((todo) => (
             <TodoListItem 
                 key = {todo.id} 
                 todo = {todo} 
-                onRemoveTodo = {onRemoveTodo}/>
+                setEditMode={setEditMode}
+                onRemoveTodo = {onRemoveTodo}
+                />
             ))}
         </ul>
-        </div>
+        
     );
 }
 

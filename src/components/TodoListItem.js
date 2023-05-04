@@ -1,37 +1,21 @@
 import React from 'react';
-import style from "./TodoListItem.module.css";
+import styles from "./TodoListItem.module.css";
+import { BsPencilFill, BsTrashFill } from "react-icons/bs"
 import { PropTypes } from "prop-types";
 
-function TodoListItem ({todo, onRemoveTodo}){
-
-    const removeit = {
-        color: "white",
-        backgroundColor: "DodgerBlue",
-        padding: "5px",
-        fontFamily: "Arial",
-        fontSize: "10px",
-        borderRadius: "20px"
-
-    //     backgroundColor: "DodgerBlue",
-    //   color: "white",
-    //   padding: "5px",
-    //   fontFamily: "Verdana, sans-serif",
-    //   fontSize: "20px",
-    //   borderRadius: "15px",
-    //   border: "2px solid",
-    };
+function TodoListItem ({todo, onRemoveTodo, setEditMode}){
 
     return (
-        <>
-        <li className={style.ListItem}> 
-            {" "} {todo.fields.Title} {" "}
-            <button style={removeit} 
-                    type="button" 
-                    onClick={() => onRemoveTodo(todo.id)}>
-                Delete
-            </button>
+        <li className={styles.todoList}> 
+
+            {todo.fields?.Title?  todo.fields.Title : todo.title }
+            
+            <button type="button" onClick={() => 
+            onRemoveTodo(todo.id)}>  <BsTrashFill/>     </button>
+
+            <button type="button" onClick={() =>
+            setEditMode({status:true, data:todo})}> <BsPencilFill/></button>  
         </li>
-        </>
     )
 }
 
