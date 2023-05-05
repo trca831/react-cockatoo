@@ -1,7 +1,7 @@
 import React from "react";
 // import Greeting from "./Greeting";
 import TodaysDate from "./TodaysDate";
-import QuoteGenerator from "./components/QuoteGenerator";
+import QuoteGenerator from "./QuoteGenerator";
 
 function MySchedule () {
     return(

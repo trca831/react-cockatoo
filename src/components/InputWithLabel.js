@@ -51,6 +51,10 @@ InputWithLabel.propTypes = {
 		children: PropTypes.string,
         todoTitle: PropTypes.array,
         handleTitleChange: PropTypes.func,
+        setInputValue: PropTypes.func,
+        inputValue: PropTypes.string,
+        editMode: PropTypes.object,
+
 }
 
 export default InputWithLabel;
