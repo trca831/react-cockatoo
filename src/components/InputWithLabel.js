@@ -41,8 +41,7 @@ function InputWithLabel ( {
                     name="title"
                     value={inputValue}
                     onChange={ (event) => setInputValue(event.target.value) }
-                    />
-                    
+                    />     
          </>
     );
 };

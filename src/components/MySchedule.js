@@ -9,6 +9,7 @@ function MySchedule () {
         <TodaysDate/>
         <br/>
         <br/>
+        <br/>
         <QuoteGenerator/>
         {/* <Greeting/> */}
         <div style={{
@@ -19,7 +20,7 @@ function MySchedule () {
             margin: "0px auto"
             
             }}>
-        <h1>Weekly Agenda</h1>
+        {/* <h1>Weekly Agenda</h1>
        <p style={{textAlign: "left"}}>Monday</p>
         <textarea style={{padding: "20px 15px"}}></textarea>
 
@@ -40,7 +41,7 @@ function MySchedule () {
 
         <p style={{textAlign: "left"}}>Sunday</p>
         <textarea style={{padding: "20px 15px"}}></textarea>
-        <br/>
+        <br/> */}
         </div>
        </>
     );

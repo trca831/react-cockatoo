@@ -173,7 +173,7 @@ function App() {
             <button type="button" 
             onClick={() => setAscending(!ascending)}> 
             <FaSync icon="fa-light fa-arrow-up-arrow-down" 
-            style={{color: "black", opacity: "90%", width: "50px", height: "40px"}} />
+            style={{color: "black", opacity: "80%", width: "10px", height: "10px"}} />
             </button>
               </>
 

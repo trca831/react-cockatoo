@@ -2,8 +2,6 @@ import React, {useState} from 'react';
 import InputWithLabel from './InputWithLabel';
 import PropTypes from "prop-types";
 
-// import styles from "./AddTodoForm.module.css";
-
 function AddTodoForm ({onAddTodo, setEditMode, editMode, onEditTodo, todoList}) {
     
     const [inputValue, setInputValue] = useState("");   

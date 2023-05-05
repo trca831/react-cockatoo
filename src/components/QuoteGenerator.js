@@ -11,18 +11,24 @@ const QuoteGenerator = () => {
           });
       }, []);
     
-    //   const handleClick = () => {
-    //     fetch("https://api.quotable.io/random")
-    //       .then((response) => response.json())
-    //       .then((data) => {
-    //         setQuote(`${data.content} —${data.author}`);
-    //       });
-    //   };
+      const handleClick = () => {
+        fetch("https://api.quotable.io/random")
+          .then((response) => response.json())
+          .then((data) => {
+            setQuote(`${data.content} —${data.author}`);
+          });
+      };
     
       return (
         <div>
-            <p>{quote}</p>
-          {/* <button onClick={handleClick}>Generate Quote</button> */}
+            <p style={{
+              borderStyle: "dotted",
+              borderColor: "black",
+              backgroundColor: "pink",
+              margin: "30px"
+
+            }}>{quote}</p>
+          <button onClick={handleClick}>Generate Quote</button>
           
         </div>
       );

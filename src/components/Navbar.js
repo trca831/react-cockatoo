@@ -10,13 +10,14 @@ function Navbar() {
             padding: "20px",
             height: "30px",
             textAlign: "right",
-            backgroundColor: "#545454",
+            backgroundColor: "#545454"
+            
            }}
            >  
         <p style={{ position: "absolute",
                     left: "auto",
                     width: "50px",
-                    height: "60px"}}> TodoList </p>
+                    height: "60px"}}> </p>
         <ul style={{}}>
                 <li style={{
                     listStyle: "none",
@@ -26,19 +27,15 @@ function Navbar() {
                         
                     <a style={{textDecoration: "none", 
                                 color: "#ff70d6", 
-                                letterSpacing: "2px"}} href='/mySchedule'> Home </a> 
+                                letterSpacing: "2px" }} href='/mySchedule'> Home </a> 
 
                     <a style={{textDecoration: "none", 
                                 color: "#ff70d6", 
                                 letterSpacing: "2px", 
-                                wordSpacing: "2px"}} href='/'> &nbsp; TodoList &nbsp; </a>
-                               
+                                wordSpacing: "2px"}} href='/'> &nbsp; TodoList &nbsp; </a>        
                 </li>
-                
         </ul>
 
-       
-      
     </div>
     </>
     )
