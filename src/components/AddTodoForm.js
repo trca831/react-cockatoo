@@ -43,6 +43,10 @@ function AddTodoForm ({onAddTodo, setEditMode, editMode, onEditTodo, todoList}) 
 
 AddTodoForm.propTypes = {
     onAddTodo: PropTypes.func,
+    setEditMode: PropTypes.func, 
+    editMode: PropTypes.object, 
+    onEditTodo: PropTypes.func, 
+    todoList: PropTypes.func,
 }
 
 export default AddTodoForm;

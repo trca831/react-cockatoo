@@ -6,7 +6,7 @@ const hours = date.getHours()
 let timeOfDay
 
 const styles = {
-  fontSize: 30
+  fontSize: 20
 }
 
 if (hours < 5){

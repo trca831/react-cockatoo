@@ -2,9 +2,9 @@ import React, {useState, useEffect} from 'react';
 import AddTodoForm from './components/AddTodoForm';
 import TodoList from './components/TodoList';
 import Navbar from './components/Navbar';
-import TodaysDate from './TodaysDate';
-import Greeting from './Greeting';
-import MySchedule from './MySchedule';
+import TodaysDate from './components/TodaysDate';
+import Greeting from './components/Greeting';
+import MySchedule from './components/MySchedule';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import { FaSync } from "react-icons/fa";
 
@@ -151,6 +151,7 @@ function App() {
           <Route path='/' element={
               <>
               <TodaysDate/>
+              <br/>
               <br/>
               <Greeting />
               <h1 className="heading">Todo List:</h1>

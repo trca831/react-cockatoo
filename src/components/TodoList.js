@@ -22,6 +22,7 @@ function TodoList ({todoList, onRemoveTodo, setEditMode}){
 TodoList.propTypes = {
     todoList: PropTypes.array,
 	onRemoveTodo: PropTypes.func,
+    setEditMode: PropTypes.func
 }
 
 export default TodoList;
