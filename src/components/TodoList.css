@@ -1,8 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Sigmar&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Sigmar&display=swap");
 
 items {
-    color-scheme: white;
-    font-family: 'Sigmar', sans-serif;
-    ;
+  color-scheme: white;
+  font-family: "Sigmar", sans-serif;
 }

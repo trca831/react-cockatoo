@@ -1,16 +1,14 @@
-
-
 /* CSS */
 .button-13 {
   background-color: #fff;
   border: 1px solid #d5d9d9;
   border-radius: 8px;
-  box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+  box-shadow: rgba(213, 217, 217, 0.5) 0 2px 5px 0;
   box-sizing: border-box;
   color: #0f1111;
   cursor: pointer;
   display: inline-block;
-  font-family: "Amazon Ember",sans-serif;
+  font-family: "Amazon Ember", sans-serif;
   font-size: 13px;
   line-height: 29px;
   padding: 10px 10px 10px 11px;
@@ -30,16 +28,16 @@
 
 .button-13:focus {
   border-color: #008296;
-  box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+  box-shadow: rgba(213, 217, 217, 0.5) 0 2px 5px 0;
   outline: 0;
 }
 
 @media screen and (max-width: 100px) {
-    .button-13 {
-      margin: 0;
-    }
+  .button-13 {
+    margin: 0;
+  }
 
-    .button-13:focus {
-      outline: 4;
-    }
+  .button-13:focus {
+    outline: 4;
+  }
 }
